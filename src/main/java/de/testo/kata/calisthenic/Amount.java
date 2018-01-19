@@ -1,5 +1,6 @@
+package de.testo.kata.calisthenic;
+
 import java.math.BigDecimal;
-import java.util.Currency;
 
 public class Amount {
     private BigDecimal value;
@@ -12,14 +13,16 @@ public class Amount {
         this.value = value;
     }
 
-    public void add(Amount augend) {
-        value = value.add(augend.value);
-
+    public Amount(Amount augend) {
+        this.value = augend.value;
     }
 
-    //Synchronize?
-    public void subtract(Amount subtrahend) {
-        value = value.subtract(subtrahend.value);
+    public Amount add(Amount augend) {
+        return new Amount(value.add(augend.value));
+    }
+
+    public Amount subtract(Amount subtrahend) {
+        return new Amount(value.subtract(subtrahend.value));
     }
 
     @Override

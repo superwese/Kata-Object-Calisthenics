@@ -1,9 +1,8 @@
-import org.junit.Before;
+import de.testo.kata.calisthenic.Account;
+import de.testo.kata.calisthenic.Amount;
 import org.junit.Test;
 
-import java.math.BigDecimal;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AccountTest {
 
